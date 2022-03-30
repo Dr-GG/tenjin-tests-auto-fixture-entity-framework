@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PackageId>Tenjin.Tests.AutoFixture.EntityFramework</PackageId>
+	<Authors>Gerard Gouws</Authors>
+	<Company>Tenjin Libraries</Company>
+	<Description>Entity framework extensions and implementations based on teh Tenjin.Tests.AutoFixture nuget package.</Description>
+	<PackageIcon>tenjin.png</PackageIcon>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/Dr-GG/tenjin-tests-auto-fixture-entity-framework</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/Dr-GG/tenjin-tests-auto-fixture-entity-framework</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<RepositoryBranch>master</RepositoryBranch>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tenjin.Tests" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="tenjin.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
