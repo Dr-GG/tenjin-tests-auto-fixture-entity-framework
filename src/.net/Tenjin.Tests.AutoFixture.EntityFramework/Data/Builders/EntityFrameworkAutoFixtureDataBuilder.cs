@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tenjin.Tests.Data.Builders.AutoFixture;
-using Tenjin.Tests.Data.Builders.AutoFixture.Options;
+using Tenjin.Tests.AutoFixture.Data.Builders;
+using Tenjin.Tests.AutoFixture.Data.Builders.Options;
 
 namespace Tenjin.Tests.AutoFixture.EntityFramework.Data.Builders
 {
