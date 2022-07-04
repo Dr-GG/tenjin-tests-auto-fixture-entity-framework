@@ -2,22 +2,21 @@
 using Tenjin.Tests.AutoFixture.Data.Builders;
 using Tenjin.Tests.AutoFixture.Data.Builders.Options;
 
-namespace Tenjin.Tests.AutoFixture.EntityFramework.Data.Builders
+namespace Tenjin.Tests.AutoFixture.EntityFramework.Data.Builders;
+
+public abstract class EntityFrameworkAutoFixtureDataBuilder<TDbContext> : AutoFixtureDataBuilder where TDbContext : DbContext
 {
-    public abstract class EntityFrameworkAutoFixtureDataBuilder<TDbContext> : AutoFixtureDataBuilder where TDbContext : DbContext
+    protected EntityFrameworkAutoFixtureDataBuilder(
+        TDbContext dbContext,
+        AutoFixtureDataBuilderOptions? options = null) : base(options)
     {
-        protected EntityFrameworkAutoFixtureDataBuilder(
-            TDbContext dbContext,
-            AutoFixtureDataBuilderOptions? options = null) : base(options)
-        {
-            DbContext = dbContext;
-        }
+        DbContext = dbContext;
+    }
 
-        public TDbContext DbContext { get; }
+    public TDbContext DbContext { get; }
 
-        public override void Save()
-        {
-            DbContext.SaveChanges();
-        }
+    public override void Save()
+    {
+        DbContext.SaveChanges();
     }
 }
