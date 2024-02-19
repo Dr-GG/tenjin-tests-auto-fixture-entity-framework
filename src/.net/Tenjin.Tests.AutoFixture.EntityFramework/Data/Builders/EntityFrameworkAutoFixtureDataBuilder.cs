@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// ReSharper disable UnusedMember.Global
+
+using Microsoft.EntityFrameworkCore;
 using Tenjin.Tests.AutoFixture.Data.Builders;
 using Tenjin.Tests.AutoFixture.Data.Builders.Options;
 
